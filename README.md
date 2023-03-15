@@ -7,12 +7,12 @@ Interação e Prompts para a criação do jogo no ChatGPT GPT-4.
 
 
 **User:**
-Crie um jogo em HMTL, CSS e Javascript. O jogo é o Tétris. Crie pontuação e velocidade de nível a medida que atingir uma pontuação. Crie cores diferentes para os blocos. Use uma paleta de cores flat. 
+Crie um jogo em HMTL, CSS e Javascript. O jogo é o Tetris. Crie pontuação e velocidade de nível a medida que atingir uma pontuação. Crie cores diferentes para os blocos. Use uma paleta de cores flat. 
 
 ---
 
 **ChatGPT:**
-Como um modelo de linguagem AI, eu não posso criar arquivos diretamente, mas posso te dar um esboço de como você pode criar um jogo de Tétris usando HTML, CSS e JavaScript. Vamos dividir isso em partes: HTML, CSS e JavaScript.
+Como um modelo de linguagem AI, eu não posso criar arquivos diretamente, mas posso te dar um esboço de como você pode criar um jogo de Tetris usando HTML, CSS e JavaScript. Vamos dividir isso em partes: HTML, CSS e JavaScript.
 <li>HTML:</li>
 Crie um arquivo chamado "index.html" e adicione o seguinte código:
 
@@ -22,14 +22,14 @@ Crie um arquivo chamado "index.html" e adicione o seguinte código:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tétris</title>
+  <title>Tetris</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <canvas id="gameCanvas" width="320" height="640"></canvas>
     <div class="sidebar">
-      <h1>Tétris</h1>
+      <h1>Tetris</h1>
       <p>Pontuação: <span id="score">0</span></p>
       <p>Nível: <span id="level">1</span></p>
     </div>
@@ -167,8 +167,8 @@ document.addEventListener('keydown', (e) => {
 startGame();
 
 ```
-Agora você tem um esboço básico para o jogo de Tétris. Você precisará preencher as funções <code>drawBlock</code>, <code>createPiece</code>, <code>checkCollision</code>, <code>movePiece</code>, <code>rotatePiece</code>, <code>updateGame</code> e <code>startGame</code> com a lógica apropriada. Além disso, você pode adicionar condições para aumentar a pontuação e a velocidade do nível à medida que os jogadores atingem determinadas pontuações.
-Este esboço deve servir como um ponto de partida para criar seu próprio jogo de Tétris. Lembre-se de que esta implementação é básica e pode ser expandida e aprimorada para atender às suas necessidades específicas.
+Agora você tem um esboço básico para o jogo de Tetris. Você precisará preencher as funções <code>drawBlock</code>, <code>createPiece</code>, <code>checkCollision</code>, <code>movePiece</code>, <code>rotatePiece</code>, <code>updateGame</code> e <code>startGame</code> com a lógica apropriada. Além disso, você pode adicionar condições para aumentar a pontuação e a velocidade do nível à medida que os jogadores atingem determinadas pontuações.
+Este esboço deve servir como um ponto de partida para criar seu próprio jogo de Tetris. Lembre-se de que esta implementação é básica e pode ser expandida e aprimorada para atender às suas necessidades específicas.
 
 ---
 
@@ -360,12 +360,12 @@ function startGame() {
 startGame();
 
 ```
-Agora você tem uma implementação completa e básica do jogo Tétris usando HTML, CSS e JavaScript. Lembre-se de que esta implementação é simples e pode ser expandida e aprimorada para atender às suas necessidades específicas. Além disso, considere adicionar mais funcionalidades, como pausar o jogo, salvar a pontuação mais alta ou adicionar animações e efeitos sonoros.
+Agora você tem uma implementação completa e básica do jogo Tetris usando HTML, CSS e JavaScript. Lembre-se de que esta implementação é simples e pode ser expandida e aprimorada para atender às suas necessidades específicas. Além disso, considere adicionar mais funcionalidades, como pausar o jogo, salvar a pontuação mais alta ou adicionar animações e efeitos sonoros.
 
 ---
 
 **User:**
-Ajuste o código para que a pontuação seja contabilizada corretamente de acordo com o jogo tétris e o nível avance a medida que o usuário faça a pontuação correta. Crie uma tela de game over. 
+Ajuste o código para que a pontuação seja contabilizada corretamente de acordo com o jogo Tetris e o nível avance a medida que o usuário faça a pontuação correta. Crie uma tela de game over. 
 
 ---
 
@@ -733,7 +733,7 @@ document.addEventListener('keydown', (e) => {
 // Iniciar o jogo
 startGame();
 ```
-Agora você tem o código JavaScript completo para o jogo Tétris, que inclui pontuação, aumento de nível, e uma tela de "Game Over". Os eventos do teclado permitem que o jogador controle o jogo usando as setas esquerda, direita e para baixo, bem como a tecla de espaço para girar as peças.
+Agora você tem o código JavaScript completo para o jogo Tetris, que inclui pontuação, aumento de nível, e uma tela de "Game Over". Os eventos do teclado permitem que o jogador controle o jogo usando as setas esquerda, direita e para baixo, bem como a tecla de espaço para girar as peças.
 
 ---
 
@@ -800,7 +800,7 @@ Crie mais blocos de acordo com o padrão do tetris.
 ---
 
 **ChatGPT:**
-No Tétris original, há sete peças diferentes conhecidas como Tetriminos. Estas peças já estão incluídas no código fornecido anteriormente. No entanto, se você deseja adicionar mais peças para criar uma versão personalizada do Tétris, você pode seguir o mesmo padrão e adicionar novos blocos ao array <code>pieces</code>.
+No Tetris original, há sete peças diferentes conhecidas como Tetriminos. Estas peças já estão incluídas no código fornecido anteriormente. No entanto, se você deseja adicionar mais peças para criar uma versão personalizada do Tetris, você pode seguir o mesmo padrão e adicionar novos blocos ao array <code>pieces</code>.
 Por exemplo, aqui estão algumas novas peças adicionadas ao jogo:
 
 ```javascript
@@ -1294,7 +1294,7 @@ Agora, os blocos só começarão a cair quando o usuário clicar no botão "Inic
 Ajuste o CSS do sidebar: 
 
 <div class="sidebar">
-      <h1>Tétris</h1>
+      <h1>Tetris</h1>
       <p>Pontuação: <span id="score">0</span></p>
       <p>Nível: <span id="level">1</span></p>
 
@@ -1351,7 +1351,7 @@ Para ajustar o CSS da barra lateral e deixá-la mais atrativa com uma conexão v
 </head>
 <body>
   <div class="sidebar">
-    <h1>Tétris</h1>
+    <h1>Tetris</h1>
     <p>Pontuação: <span id="score">0</span></p>
     <p>Nível: <span id="level">1</span></p>
   </div>
