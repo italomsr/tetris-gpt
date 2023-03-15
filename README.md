@@ -474,7 +474,9 @@ function startGame() {
 
 // Iniciar o jogo
 startGame();
+
 ```
+
 Agora, a pontuação é atualizada corretamente com base no número de linhas eliminadas e multiplicada pelo nível atual. O jogo avança de nível conforme a pontuação aumenta. Além disso, uma tela de "Game Over" é exibida quando o jogo termina, e o jogador tem a opção de reiniciar o jogo clicando no botão "Reiniciar".
 
 ---
@@ -486,6 +488,7 @@ Escreva o código javascript completo.
 
 **ChatGPT:**
 Aqui está o código JavaScript completo, incluindo as alterações mencionadas anteriormente:
+
 ```javascript
 javascript
 Copy code
@@ -601,6 +604,7 @@ continue " if (current"
 
 **ChatGPT:**
 Continuando o código JavaScript:
+
 ```javascript
 javascript
 Copy code
@@ -722,6 +726,7 @@ continue "document.getElementById('level').textContent = level;
 
 **ChatGPT:**
 Continuando o código JavaScript:
+
 ```javascript
 javascript
 Copy code
