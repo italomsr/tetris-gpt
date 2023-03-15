@@ -1,6 +1,6 @@
 
 ```
-Interação e Prompts para a criação do jogo.
+Interação e Prompts para a criação do jogo no ChatGPT GPT-4.
 ```
 
 ---
@@ -15,6 +15,7 @@ Crie um jogo em HMTL, CSS e Javascript. O jogo é o Tétris. Crie pontuação e 
 Como um modelo de linguagem AI, eu não posso criar arquivos diretamente, mas posso te dar um esboço de como você pode criar um jogo de Tétris usando HTML, CSS e JavaScript. Vamos dividir isso em partes: HTML, CSS e JavaScript.
 <li>HTML:</li>
 Crie um arquivo chamado "index.html" e adicione o seguinte código:
+
 ```html
 html
 Copy code
@@ -41,6 +42,7 @@ Copy code
 ```
 <li>CSS:</li>
 Crie um arquivo chamado "styles.css" e adicione o seguinte código:
+
 ```css
 css
 Copy code
@@ -77,8 +79,10 @@ p {
   margin: 5px 0;
 }
 ```
+
 <li>JavaScript:</li>
 Crie um arquivo chamado "tetris.js" e adicione o seguinte código básico:
+
 ```javascript
 javascript
 Copy code
@@ -132,6 +136,7 @@ function startGame() {
 
 // Eventos do teclado
 document.addEventListener
+
 ```
 
 ---
@@ -144,6 +149,7 @@ document.addEventListener"
 
 **ChatGPT:**
 Continuando o código JavaScript:
+
 ```javascript
 javascript
 Copy code
@@ -180,6 +186,7 @@ Crie os conteúdos das funções drawBlock, createPiece, checkCollision, movePie
 
 **ChatGPT:**
 Aqui está uma implementação básica das funções mencionadas:
+
 ```javascript
 javascript
 Copy code
@@ -297,6 +304,7 @@ continue "  board.unshift(Array(cols).fill(0));
 
 **ChatGPT:**
 Continuando o código JavaScript:
+
 ```javascript
 javascript
 Copy code
@@ -361,6 +369,7 @@ function startGame() {
 
 // Iniciar o jogo
 startGame();
+
 ```
 Agora você tem uma implementação completa e básica do jogo Tétris usando HTML, CSS e JavaScript. Lembre-se de que esta implementação é simples e pode ser expandida e aprimorada para atender às suas necessidades específicas. Além disso, considere adicionar mais funcionalidades, como pausar o jogo, salvar a pontuação mais alta ou adicionar animações e efeitos sonoros.
 
@@ -373,6 +382,7 @@ Ajuste o código para que a pontuação seja contabilizada corretamente de acord
 
 **ChatGPT:**
 Aqui está uma versão atualizada do código JavaScript que contabiliza a pontuação corretamente, avança os níveis de acordo com a pontuação e adiciona uma tela de "Game Over":
+
 ```javascript
 javascript
 Copy code
