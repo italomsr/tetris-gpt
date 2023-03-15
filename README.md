@@ -17,8 +17,6 @@ Como um modelo de linguagem AI, eu não posso criar arquivos diretamente, mas po
 Crie um arquivo chamado "index.html" e adicione o seguinte código:
 
 ```html
-html
-Copy code
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -43,9 +41,7 @@ Copy code
 <li>CSS:</li>
 Crie um arquivo chamado "styles.css" e adicione o seguinte código:
 
-```css
-css
-Copy code
+```
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -84,8 +80,6 @@ p {
 Crie um arquivo chamado "tetris.js" e adicione o seguinte código básico:
 
 ```javascript
-javascript
-Copy code
 // Configuração do jogo
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -151,8 +145,6 @@ document.addEventListener"
 Continuando o código JavaScript:
 
 ```javascript
-javascript
-Copy code
 // Eventos do teclado
 document.addEventListener('keydown', (e) => {
   switch (e.key) {
@@ -173,6 +165,7 @@ document.addEventListener('keydown', (e) => {
 
 // Iniciar o jogo
 startGame();
+
 ```
 Agora você tem um esboço básico para o jogo de Tétris. Você precisará preencher as funções <code>drawBlock</code>, <code>createPiece</code>, <code>checkCollision</code>, <code>movePiece</code>, <code>rotatePiece</code>, <code>updateGame</code> e <code>startGame</code> com a lógica apropriada. Além disso, você pode adicionar condições para aumentar a pontuação e a velocidade do nível à medida que os jogadores atingem determinadas pontuações.
 Este esboço deve servir como um ponto de partida para criar seu próprio jogo de Tétris. Lembre-se de que esta implementação é básica e pode ser expandida e aprimorada para atender às suas necessidades específicas.
@@ -188,8 +181,6 @@ Crie os conteúdos das funções drawBlock, createPiece, checkCollision, movePie
 Aqui está uma implementação básica das funções mencionadas:
 
 ```javascript
-javascript
-Copy code
 // Função para desenhar blocos
 function drawBlock(x, y, color) {
   ctx.fillStyle = color;
@@ -306,8 +297,6 @@ continue "  board.unshift(Array(cols).fill(0));
 Continuando o código JavaScript:
 
 ```javascript
-javascript
-Copy code
       board.unshift(Array(cols).fill(0));
     } else {
       r--;
@@ -384,8 +373,6 @@ Ajuste o código para que a pontuação seja contabilizada corretamente de acord
 Aqui está uma versão atualizada do código JavaScript que contabiliza a pontuação corretamente, avança os níveis de acordo com a pontuação e adiciona uma tela de "Game Over":
 
 ```javascript
-javascript
-Copy code
 // Variáveis adicionais do jogo
 let gameOver = false;
 const gameContainer = document.querySelector('.container');
@@ -490,8 +477,6 @@ Escreva o código javascript completo.
 Aqui está o código JavaScript completo, incluindo as alterações mencionadas anteriormente:
 
 ```javascript
-javascript
-Copy code
 // Configuração do jogo
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
@@ -606,8 +591,6 @@ continue " if (current"
 Continuando o código JavaScript:
 
 ```javascript
-javascript
-Copy code
       if (currentPiece.shape[r][c]) {
         board[currentPiece.y + r][currentPiece.x + c] = currentPiece.color;
       }
@@ -728,8 +711,6 @@ continue "document.getElementById('level').textContent = level;
 Continuando o código JavaScript:
 
 ```javascript
-javascript
-Copy code
     document.getElementById('level').textContent = level;
     updateGame();
   }
@@ -763,9 +744,8 @@ Ajuste as funções de GameOver, está com um loop incorreto.
 
 **ChatGPT:**
 Desculpe pela confusão. Vou ajustar a função <code>updateGame</code> para corrigir o problema de loop incorreto e evitar a chamada dessa função quando o jogo estiver em "Game Over":
+
 ```javascript
-javascript
-Copy code
 // Função para atualizar o jogo
 function updateGame() {
   if (!gameOver) {
@@ -822,9 +802,8 @@ Crie mais blocos de acordo com o padrão do tetris.
 **ChatGPT:**
 No Tétris original, há sete peças diferentes conhecidas como Tetriminos. Estas peças já estão incluídas no código fornecido anteriormente. No entanto, se você deseja adicionar mais peças para criar uma versão personalizada do Tétris, você pode seguir o mesmo padrão e adicionar novos blocos ao array <code>pieces</code>.
 Por exemplo, aqui estão algumas novas peças adicionadas ao jogo:
+
 ```javascript
-javascript
-Copy code
 const pieces = [
   // Peças originais
   [
@@ -888,9 +867,8 @@ ajuste a função de nível para que o nível avance apenas quando o usuário at
 
 **ChatGPT:**
 Aqui estão as funções ajustadas conforme sua solicitação:
+
 ```javascript
-javascript
-Copy code
 // Função para atualizar a pontuação
 function updateScore(linesCleared) {
   const scoreValues = [0, 100, 300, 500, 800];
@@ -950,9 +928,8 @@ ajuste o código para que os blocos comecem a cair automaticamente.
 
 **ChatGPT:**
 Para fazer com que os blocos comecem a cair automaticamente, você pode criar uma função de intervalo que irá mover a peça atual para baixo a cada período específico de tempo. Vou ajustar a função <code>updateGame</code> para incorporar esta mudança:
+
 ```javascript
-javascript
-Copy code
 // Função para atualizar o jogo
 function updateGame() {
   if (!gameOver) {
@@ -989,9 +966,8 @@ Ajuste a função para que o teclado fique bloqueado até o usuário clicar em r
 
 **ChatGPT:**
 Para bloquear o teclado até que o usuário clique em "Reiniciar", você pode criar uma variável chamada <code>keyboardEnabled</code> e verificá-la antes de processar os eventos do teclado. Vou ajustar o código para incorporar esta mudança:
+
 ```javascript
-javascript
-Copy code
 let keyboardEnabled = true;
 
 // Eventos do teclado
@@ -1044,9 +1020,8 @@ Está aparecendo duas vezes o bloco de Game Over como corrigir isso?
 
 **ChatGPT:**
 Desculpe pelo inconveniente. Vamos corrigir o problema adicionando uma verificação na função <code>showGameOver</code> para garantir que o elemento "Game Over" seja criado apenas uma vez. Para fazer isso, usaremos uma variável chamada <code>gameOverText</code> que será armazenada fora das funções.
+
 ```javascript
-javascript
-Copy code
 let keyboardEnabled = true;
 let gameOverText = null;
 
@@ -1088,15 +1063,13 @@ Como criar um botão de iniciar e pausar.
 **ChatGPT:**
 Você pode criar um botão de iniciar e pausar adicionando um botão HTML ao seu arquivo e, em seguida, usando JavaScript para alternar entre os estados de "Iniciar" e "Pausar". Aqui está como fazer isso:
 <li>Adicione o botão de iniciar/pausar ao seu HTML:</li>
+
 ```html
-html
-Copy code
 <button id="startPauseButton">Iniciar</button>
 ```
 <li>Crie uma variável <code>isPaused</code> e ajuste a função <code>updateGame</code> para verificar se o jogo está pausado:</li>
+
 ```javascript
-javascript
-Copy code
 let isPaused = false;
 
 // Função para atualizar o jogo
@@ -1111,9 +1084,8 @@ function updateGame() {
 }
 ```
 <li>Adicione um manipulador de eventos para o botão de iniciar/pausar:</li>
+
 ```javascript
-javascript
-Copy code
 document.getElementById('startPauseButton').addEventListener('click', () => {
   isPaused = !isPaused;
 
@@ -1137,9 +1109,8 @@ Ajuste o código para exibir o bloco de game over centralizado dentro do canvas 
 **ChatGPT:**
 Para exibir o bloco "Game Over" centralizado dentro do canvas e adicionar um overlay, siga estas etapas:
 <li>Crie o CSS para o overlay e o bloco "Game Over" centralizado:</li>
+
 ```css
-css
-Copy code
 .overlay {
   position: absolute;
   top: 0;
@@ -1161,9 +1132,8 @@ Copy code
 }
 ```
 <li>Ajuste a função <code>showGameOver</code> para incluir o overlay e o bloco "Game Over" centralizado:</li>
+
 ```javascript
-javascript
-Copy code
 function showGameOver() {
   if (gameOverText) return;
 
@@ -1196,8 +1166,6 @@ function showGameOver() {
 ```
 Com essas alterações, o bloco "Game Over" será exibido centralizado dentro do canvas e com um overlay semi-transparente. Lembre-se de adicionar o elemento <code>gameContainer</code> no seu HTML, caso ainda não tenha feito. Ele deve envolver o elemento <code>canvas</code>:
 ```html
-html
-Copy code
 <div id="gameContainer" style="position: relative;">
   <canvas id="gameCanvas" width="320" height="640"></canvas>
 </div>
@@ -1213,9 +1181,8 @@ Crie também um botão iniciar com um overlay.
 **ChatGPT:**
 Para criar um botão "Iniciar" com um overlay, siga estas etapas:
 <li>Crie o CSS para o botão "Iniciar" centralizado:</li>
+
 ```css
-css
-Copy code
 .start-container {
   background-color: white;
   padding: 20px;
@@ -1224,9 +1191,8 @@ Copy code
 }
 ```
 <li>Crie uma função <code>showStartScreen</code> para exibir o overlay e o botão "Iniciar" centralizado:</li>
+
 ```javascript
-javascript
-Copy code
 function showStartScreen() {
   if (gameOverText) return;
 
@@ -1255,9 +1221,8 @@ function showStartScreen() {
 }
 ```
 <li>Chame a função <code>showStartScreen</code> logo após a definição da função para exibir a tela inicial assim que o jogo for carregado:</li>
+
 ```javascript
-javascript
-Copy code
 showStartScreen();
 ```
 Agora, quando o jogo for carregado, será exibida uma tela inicial com um overlay e um botão "Iniciar" centralizado. Ao clicar no botão "Iniciar", o jogo começará e o overlay desaparecerá.
@@ -1272,15 +1237,13 @@ Ajuste a função de iniciar para que os blocos só iniciem a cair quando clicar
 **ChatGPT:**
 Para fazer com que os blocos só comecem a cair quando o usuário clicar no botão "Iniciar", você pode criar uma variável chamada <code>gameStarted</code> e verificar seu valor antes de permitir que os blocos caiam. Aqui está como ajustar o código:
 <li>Adicione a variável <code>gameStarted</code>:</li>
+
 ```javascript
-javascript
-Copy code
 let gameStarted = false;
 ```
 <li>Ajuste a função <code>updateGame</code> para verificar se o jogo foi iniciado:</li>
+
 ```javascript
-javascript
-Copy code
 // Função para atualizar o jogo
 function updateGame() {
   if (!gameOver && !isPaused && gameStarted) {
@@ -1293,9 +1256,8 @@ function updateGame() {
 }
 ```
 <li>Modifique a função <code>showStartScreen</code> para definir <code>gameStarted</code> como <code>true</code> quando o botão "Iniciar" for clicado:</li>
+
 ```javascript
-javascript
-Copy code
 function showStartScreen() {
   if (gameOverText) return;
 
@@ -1343,8 +1305,6 @@ Deixe de uma modo atrativo que tenha ligação com jogo.
 **ChatGPT:**
 Para ajustar o CSS da barra lateral e deixá-la mais atrativa com uma conexão visual ao jogo, você pode adicionar cores e estilos inspirados no Tetris. Aqui está um exemplo de CSS para aplicar na barra lateral:
 ```html
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
